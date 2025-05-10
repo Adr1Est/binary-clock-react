@@ -6,7 +6,7 @@ function App (){
 
   return (
     <>
-      <div className='flex flex-col w-full lg:w-4/6 border-4 border-amber-300'>
+      <div className='flex flex-col gap-5 w-full lg:w-4/6 border-3 border-gray-800 rounded-xl p-5'>
         <ClockMain />
         <ButtonsApp/>
       </div>

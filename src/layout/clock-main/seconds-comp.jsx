@@ -1,11 +1,12 @@
 import LedLight from "./led-light"
 
-function HoursLayout({obtenerClases}){
+function SecondsLayout({obtenerClases}){
 
   return(
     <>
       <div className="flex flex-row items-end w-1/3">
         <div className="w-1/2 flex flex-col justify-center items-center gap-5">
+          <LedLight clases={obtenerClases}/>
           <LedLight clases={obtenerClases}/>
           <LedLight clases={obtenerClases}/>
         </div>
@@ -20,4 +21,4 @@ function HoursLayout({obtenerClases}){
   )
 }
 
-export default HoursLayout
+export default SecondsLayout
