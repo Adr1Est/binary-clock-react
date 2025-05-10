@@ -1,1 +1,1 @@
-# binary-clock-react
+# Binary Clock
