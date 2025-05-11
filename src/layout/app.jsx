@@ -68,7 +68,7 @@ function App (){
   return (
     <>
       <div className='flex flex-col gap-5 w-full lg:w-200 p-5'>
-        <ClockMain/>
+        <ClockMain obtenerHoras={hoursStt} obtenerMinutos={minutesStt} obtenerSegundos={secondsStt}/>
         <RenderHour obtenerHoras={hoursStt} obtenerMinutos={minutesStt} obtenerSegundos={secondsStt}/>
         <ButtonsApp funcionStart={_startClock} funcionStop={_stopClock}/>
       </div>

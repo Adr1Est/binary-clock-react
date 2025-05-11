@@ -1,6 +1,6 @@
 import LedLight from "./led-light"
 
-function SecondsLayout({obtenerClases}){
+function SecondsLayout({obtenerClases, segundos}){
 
   return(
     <>

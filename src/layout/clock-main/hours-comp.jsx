@@ -1,6 +1,6 @@
 import LedLight from "./led-light"
 
-function HoursLayout({obtenerClases}){
+function HoursLayout({obtenerClases, horas}){
 
   return(
     <>
