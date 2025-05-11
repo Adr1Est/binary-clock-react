@@ -51,7 +51,6 @@ function App (){
 
   return (
     <>
-    {/* className='flex flex-col gap-5 w-full lg:w-4/6 border-3 border-gray-800 rounded-xl p-5' */}
       <div className='flex flex-col gap-5 w-full lg:w-200 p-5'>
         <ClockMain/>
         <RenderHour realTime={realTimeHour}/>
