@@ -5,22 +5,36 @@ import { useEffect, useState } from 'react'
 import RenderHour from './real-time-hour/normal-hour'
 
 function App (){
-  const [realTimeHour, setHour] = useState(null)
+  const [hoursStt, setHours] = useState("00")
+  const [minutesStt, setMinutes] = useState("00")
+  const [secondsStt, setSeconds] = useState("00")
   const [intervalId, setIntervalId] = useState(null)
 
-  const _getHour = () => {
+  const _getHours = () => {
     const now = new Date()
     const hours = String(now.getHours()).padStart(2, '0')
+
+    return hours
+  }
+  const _getMinutes = () => {
+    const now = new Date()
     const minutes = String(now.getMinutes()).padStart(2, '0')
+
+    return minutes
+  }
+  const _getSeconds = () => {
+    const now = new Date()
     const seconds = String(now.getSeconds()).padStart(2, '0')
 
-    return `${hours}:${minutes}:${seconds}`
+    return seconds
   }
 
   const _startClock = ()=>{
     _stopClock() //Se asegura de parar el intervalo anterior
     const hourInterval = setInterval(()=>{
-      setHour(_getHour())
+      setHours(_getHours())
+      setMinutes(_getMinutes())
+      setSeconds(_getSeconds())
     }, 1000)
 
     setIntervalId(hourInterval)
@@ -38,7 +52,9 @@ function App (){
 
   useEffect(()=>{
     const hourInterval = setInterval(()=>{
-      setHour(_getHour())
+      setHours(_getHours())
+      setMinutes(_getMinutes())
+      setSeconds(_getSeconds())
     }, 1000)
     setIntervalId(hourInterval)
 
@@ -46,14 +62,14 @@ function App (){
   }, [])
 
   useEffect(()=>{
-    console.log(realTimeHour)
-  }, [realTimeHour])
+    console.log(`${hoursStt}:${minutesStt}:${secondsStt}`)
+  }, [hoursStt, minutesStt, secondsStt])
 
   return (
     <>
       <div className='flex flex-col gap-5 w-full lg:w-200 p-5'>
         <ClockMain/>
-        <RenderHour realTime={realTimeHour}/>
+        <RenderHour obtenerHoras={hoursStt} obtenerMinutos={minutesStt} obtenerSegundos={secondsStt}/>
         <ButtonsApp funcionStart={_startClock} funcionStop={_stopClock}/>
       </div>
     </>

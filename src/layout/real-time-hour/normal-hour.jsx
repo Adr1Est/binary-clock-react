@@ -1,9 +1,9 @@
-function RenderHour({realTime}){
+function RenderHour({obtenerHoras, obtenerMinutos, obtenerSegundos}){
 
   return(
     <>
       <div className="flex justify-center items-center font-bold text-gray-500 mt-3 p-4">
-        <p>{realTime}</p>
+        <p>{`${obtenerHoras}:${obtenerMinutos}:${obtenerSegundos}`}</p>
       </div>
     </>
   )
