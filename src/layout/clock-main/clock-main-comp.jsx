@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 
 function ClockMain({obtenerHoras, obtenerMinutos, obtenerSegundos}){
   const [ledLightClass, setLedLightClass] = useState("");
-  let ledClassName = "bg-red-950 opacity-25 w-10 h-10 md:w-20 md:h-20 rounded-full"
+  const ledClassName = "bg-red-950 opacity-25 w-10 h-10 md:w-20 md:h-20 rounded-full"
 
   useEffect(()=>{
     

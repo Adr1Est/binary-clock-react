@@ -1,7 +1,7 @@
-function LedLight({clases}){
+function LedLight({clases, id}){
   return(
     <>
-      <div className={clases}></div>
+      <div id={id} className={clases}></div>
     </>
   )
 }

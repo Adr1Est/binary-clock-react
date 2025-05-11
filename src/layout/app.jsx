@@ -61,10 +61,6 @@ function App (){
     return ()=> clearInterval(hourInterval)
   }, [])
 
-  useEffect(()=>{
-    console.log(`${hoursStt}:${minutesStt}:${secondsStt}`)
-  }, [hoursStt, minutesStt, secondsStt])
-
   return (
     <>
       <div className='flex flex-col gap-5 w-full lg:w-200 p-5'>
