@@ -11,4 +11,4 @@
 <img src="https://img.shields.io/badge/TypeScript-%20-lightgrey?logo=typescript" alt="typescript">
 
 ### Subido a: 
-<a href="https://binary-clock-aes.netlify.app/" target="_blank"><img src="https://img.shields.io/badge/Netlify-%20-lightgrey?logo=netlify" alt="netlify"></a>
+[!netlify](https://img.shields.io/badge/Netlify-%20-lightgrey?logo=netlify)](https://binary-clock-aes.netlify.app/)
