@@ -1,7 +1,7 @@
-function LedLight({clases}){
+function LedLight({claseComun, classLedState}){
   return(
     <>
-      <div className={clases}></div>
+      <div className={`${claseComun} ${classLedState}`}></div>
     </>
   )
 }

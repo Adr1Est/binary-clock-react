@@ -1,7 +1,7 @@
 import LedLight from "./led-light"
 import { useState, useEffect } from "react"
 
-function MinutesLayout({minutos}){
+function MinutesLayout({minutos, clasePrincipal}){
   const ledOffClassName = "bg-red-900 opacity-25 w-10 h-10 md:w-20 md:h-20 rounded-full"
   const ledOnClassName = "bg-red-300 w-10 h-10 md:w-20 md:h-20 rounded-full"
   const [firstHourDigitStateOne, setFirstHourDigitStateOne] = useState(ledOffClassName)
@@ -44,15 +44,15 @@ function MinutesLayout({minutos}){
     <>
       <div className="flex flex-row items-end w-1/3">
         <div className="w-1/2 flex flex-col justify-center items-center gap-5">
-          <LedLight clases={firstHourDigitStateFour}/>
-          <LedLight clases={firstHourDigitStateTwo}/>
-          <LedLight clases={firstHourDigitStateOne}/>
+          <LedLight claseComun={clasePrincipal} classLedState={firstHourDigitStateFour}/>
+          <LedLight claseComun={clasePrincipal} classLedState={firstHourDigitStateTwo}/>
+          <LedLight claseComun={clasePrincipal} classLedState={firstHourDigitStateOne}/>
         </div>
         <div className="w-1/2 flex flex-col justify-center items-center gap-5">
-          <LedLight clases={secondHourDigitStateEight}/>
-          <LedLight clases={secondHourDigitStateFour}/>
-          <LedLight clases={secondHourDigitStateTwo}/>
-          <LedLight clases={secondHourDigitStateOne}/>
+          <LedLight claseComun={clasePrincipal} classLedState={secondHourDigitStateEight}/>
+          <LedLight claseComun={clasePrincipal} classLedState={secondHourDigitStateFour}/>
+          <LedLight claseComun={clasePrincipal} classLedState={secondHourDigitStateTwo}/>
+          <LedLight claseComun={clasePrincipal} classLedState={secondHourDigitStateOne}/>
         </div>
       </div>
     </>
