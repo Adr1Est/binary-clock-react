@@ -26,20 +26,19 @@ function SecondsLayout({segundos}){
   }
     
   const updateLights = ()=> {
-    let digits = _getDigitList(segundos)
-    setFirstHourDigitStateOne(clockRules.ledValueOne.includes(digits[0]) ? ledOnClassName : ledOffClassName)
-    setFirstHourDigitStateTwo(clockRules.ledValueTwo.includes(digits[0]) ? ledOnClassName : ledOffClassName)
-    setFirstHourDigitStateFour(clockRules.ledValueFour.includes(digits[0]) ? ledOnClassName : ledOffClassName)
-    setFirstHourDigitStateEight(clockRules.ledValueEight.includes(digits[0]) ? ledOnClassName : ledOffClassName)
-    setSecondHourDigitStateOne(clockRules.ledValueOne.includes(digits[1]) ? ledOnClassName : ledOffClassName)
-    setSecondHourDigitStateTwo(clockRules.ledValueTwo.includes(digits[1]) ? ledOnClassName : ledOffClassName)
-    setSecondHourDigitStateFour(clockRules.ledValueFour.includes(digits[1]) ? ledOnClassName : ledOffClassName)
-    setSecondHourDigitStateEight(clockRules.ledValueEight.includes(digits[1]) ? ledOnClassName : ledOffClassName)
+    const [firstDigit, secondDigit] = _getDigitList(segundos)
+    setFirstHourDigitStateOne(clockRules.ledValueOne.includes(firstDigit) ? ledOnClassName : ledOffClassName)
+    setFirstHourDigitStateTwo(clockRules.ledValueTwo.includes(firstDigit) ? ledOnClassName : ledOffClassName)
+    setFirstHourDigitStateFour(clockRules.ledValueFour.includes(firstDigit) ? ledOnClassName : ledOffClassName)
+    setFirstHourDigitStateEight(clockRules.ledValueEight.includes(firstDigit) ? ledOnClassName : ledOffClassName)
+    setSecondHourDigitStateOne(clockRules.ledValueOne.includes(secondDigit) ? ledOnClassName : ledOffClassName)
+    setSecondHourDigitStateTwo(clockRules.ledValueTwo.includes(secondDigit) ? ledOnClassName : ledOffClassName)
+    setSecondHourDigitStateFour(clockRules.ledValueFour.includes(secondDigit) ? ledOnClassName : ledOffClassName)
+    setSecondHourDigitStateEight(clockRules.ledValueEight.includes(secondDigit) ? ledOnClassName : ledOffClassName)
   }
     
   useEffect(()=>{
     updateLights()
-    console.log(`Segundos => ${segundos}`);
   }, [segundos])
 
   return(

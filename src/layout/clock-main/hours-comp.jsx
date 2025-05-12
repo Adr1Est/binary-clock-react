@@ -24,13 +24,13 @@ function HoursLayout({horas}){
   }
 
   const updateLights = ()=> {
-    let digits = _getDigitList(horas)
-    setFirstHourDigitStateOne(clockRules.ledValueOne.includes(digits[0]) ? ledOnClassName : ledOffClassName)
-    setFirstHourDigitStateTwo(clockRules.ledValueTwo.includes(digits[0]) ? ledOnClassName : ledOffClassName)
-    setSecondHourDigitStateOne(clockRules.ledValueOne.includes(digits[1]) ? ledOnClassName : ledOffClassName)
-    setSecondHourDigitStateTwo(clockRules.ledValueTwo.includes(digits[1]) ? ledOnClassName : ledOffClassName)
-    setSecondHourDigitStateFour(clockRules.ledValueFour.includes(digits[1]) ? ledOnClassName : ledOffClassName)
-    setSecondHourDigitStateEight(clockRules.ledValueEight.includes(digits[1]) ? ledOnClassName : ledOffClassName)
+    const [firstDigit, secondDigit] = _getDigitList(horas)
+    setFirstHourDigitStateOne(clockRules.ledValueOne.includes(firstDigit) ? ledOnClassName : ledOffClassName)
+    setFirstHourDigitStateTwo(clockRules.ledValueTwo.includes(firstDigit) ? ledOnClassName : ledOffClassName)
+    setSecondHourDigitStateOne(clockRules.ledValueOne.includes(secondDigit) ? ledOnClassName : ledOffClassName)
+    setSecondHourDigitStateTwo(clockRules.ledValueTwo.includes(secondDigit) ? ledOnClassName : ledOffClassName)
+    setSecondHourDigitStateFour(clockRules.ledValueFour.includes(secondDigit) ? ledOnClassName : ledOffClassName)
+    setSecondHourDigitStateEight(clockRules.ledValueEight.includes(secondDigit) ? ledOnClassName : ledOffClassName)
   }
 
   useEffect(()=>{
