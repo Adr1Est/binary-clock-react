@@ -2,8 +2,8 @@ import LedLight from "./led-light"
 import { useState, useEffect } from "react"
 
 function MinutesLayout({minutos, clasePrincipal}){
-  const ledOffClassName = "bg-red-900 opacity-25 w-10 h-10 md:w-20 md:h-20 rounded-full"
-  const ledOnClassName = "bg-red-300 w-10 h-10 md:w-20 md:h-20 rounded-full"
+  const ledOffClassName = "bg-red-900 opacity-25"
+  const ledOnClassName = "bg-red-300"
   const [firstHourDigitStateOne, setFirstHourDigitStateOne] = useState(ledOffClassName)
   const [firstHourDigitStateTwo, setFirstHourDigitStateTwo] = useState(ledOffClassName)
   const [firstHourDigitStateFour, setFirstHourDigitStateFour] = useState(ledOffClassName)
