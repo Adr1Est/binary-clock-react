@@ -42,14 +42,14 @@ function HoursLayout({horas}){
     <>
       <div className="flex flex-row items-end w-1/3">
         <div className="w-1/2 flex flex-col justify-center items-center gap-5">
-          <LedLight id="firstHourDigit-2" clases={firstHourDigitStateTwo}/>
-          <LedLight id="firstHourDigit-1" clases={firstHourDigitStateOne}/>
+          <LedLight clases={firstHourDigitStateTwo}/>
+          <LedLight clases={firstHourDigitStateOne}/>
         </div>
         <div className="w-1/2 flex flex-col justify-center items-center gap-5">
-          <LedLight id="secondHourDigit-8" clases={secondHourDigitStateEight}/>
-          <LedLight id="secondHourDigit-4" clases={secondHourDigitStateFour}/>
-          <LedLight id="secondHourDigit-2" clases={secondHourDigitStateTwo}/>
-          <LedLight id="secondHourDigit-1" clases={secondHourDigitStateOne}/>
+          <LedLight clases={secondHourDigitStateEight}/>
+          <LedLight clases={secondHourDigitStateFour}/>
+          <LedLight clases={secondHourDigitStateTwo}/>
+          <LedLight clases={secondHourDigitStateOne}/>
         </div>
       </div>
     </>
