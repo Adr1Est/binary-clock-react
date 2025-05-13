@@ -3,6 +3,7 @@ import ClockMain from './clock-main/clock-main-comp'
 import ButtonsApp from './buttons/buttons-layout'
 import { useEffect, useState } from 'react'
 import RenderHour from './real-time-hour/normal-hour'
+import Footer from './footer/footer'
 
 function App (){
   const [hoursStt, setHours] = useState("00")
@@ -67,6 +68,7 @@ function App (){
         <ClockMain obtenerHoras={hoursStt} obtenerMinutos={minutesStt} obtenerSegundos={secondsStt}/>
         <RenderHour obtenerHoras={hoursStt} obtenerMinutos={minutesStt} obtenerSegundos={secondsStt}/>
         <ButtonsApp funcionStart={_startClock} funcionStop={_stopClock}/>
+        <Footer/>
       </div>
     </>
   )
