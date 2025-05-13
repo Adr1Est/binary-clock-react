@@ -13,3 +13,5 @@
 ### Deploy: 
 [![Netlify](https://img.shields.io/badge/Netlify-%20-lightgrey?logo=netlify)](https://binary-clock-aes.netlify.app/)
 
+### Última actualización:
+- 13/05/2025 => "implementacion componente @number-flow/react"
